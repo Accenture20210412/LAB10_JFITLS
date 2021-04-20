@@ -1,4 +1,4 @@
-package lab10.resources;
+package main.java.lab10.resources;
 
 public interface iResources {
 }
