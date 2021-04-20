@@ -1,5 +1,5 @@
 package lab10;
 
 public enum Coin {
-    _1, _5, _10, _25;
+    ONE, FIVE, TEN, TWENTY_FIVE;
 }
