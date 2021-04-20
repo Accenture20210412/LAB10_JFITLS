@@ -1,4 +1,4 @@
-package lab10;
+package main.java.lab10;
 
 public enum Ticket {
     ONE_HOUR_TICKET(25), FOUR_HOUR_TICKET(35), TWENTY_HOUR_TICKET(45);

@@ -1,4 +1,4 @@
-package lab10;
+package main.java.lab10;
 
 
 import java.util.Scanner;
