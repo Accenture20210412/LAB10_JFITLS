@@ -8,6 +8,6 @@ public interface ICoinResources {
 
     void add(List<Coin> coinList);
 
-    boolean giveChangeBack(List<Coin> coinList);
+    List<Coin> giveChangeBack(int change);
 
 }

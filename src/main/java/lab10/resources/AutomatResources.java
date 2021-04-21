@@ -10,23 +10,27 @@ public class AutomatResources implements IAutomatResoureces {
 
 
     private ICoinResources coins = new CoinResources();
-    private ICoinBuffer coinBuffer = new CoinBuffer();
+    private ICoinLoader coinLoader = new CoinLoader();
 
 
     @Override
-    public int add(Coin coin) {
-        return coinBuffer.add(coin);
+    public int load(Coin coin) {
+        return coinLoader.add(coin);
     }
 
     @Override
     public List<Coin> returnCoins() {
-        return coinBuffer.returnCoins();
+        return coinLoader.returnCoins();
     }
-
+//TODO:: przeredagować ten kod
     @Override
-    public void giveChangeBacK(List<Coin> coinList) {
-        coins.add(coinBuffer.returnCoins());
-        coins.giveChangeBack(coinList);
+    public List<Coin> giveChangeBacK(int change) {
+        List<Coin> coinsToReturn;
+        coinsToReturn = coins.giveChangeBack(change);
+        if(coinsToReturn.isEmpty()) {
+            return coinLoader.returnCoins();
+        }
+        coins.add(coinLoader.returnCoins());
+        return coinsToReturn;
     }
-
 }

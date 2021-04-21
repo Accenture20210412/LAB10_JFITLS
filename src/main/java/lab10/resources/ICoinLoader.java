@@ -4,11 +4,11 @@ import lab10.Coin;
 
 import java.util.List;
 
-public interface ICoinBuffer {
+public interface ICoinLoader {
 
     int add(Coin coin);
 
-    int getBufforValue();
+//    int getCoinsValue();
 
     List<Coin> returnCoins();
 }

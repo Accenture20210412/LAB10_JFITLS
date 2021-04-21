@@ -7,22 +7,22 @@ import java.util.LinkedList;
 import java.util.List;
 
 @Getter
-public class CoinBuffer implements ICoinBuffer {
+public class CoinLoader implements ICoinLoader {
 
     private List<Coin> coinBuffer;
 
-    public CoinBuffer() {
+    public CoinLoader() {
         coinBuffer = new LinkedList<>();
     }
 
     @Override
     public int add(Coin coin) {
         coinBuffer.add(coin);
-        return getBufforValue();
+        return getCoinsValue();
     }
 
-    @Override
-    public int getBufforValue() {
+
+    private int getCoinsValue() {
         int value = 0;
         for (Coin i : coinBuffer) {
             value += i.getValue();

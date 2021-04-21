@@ -7,11 +7,11 @@ import java.util.List;
 
 public interface IAutomatResoureces {
 
- int add(Coin coin);
+ int load(Coin coin);
 
  List<Coin> returnCoins();
 
- void giveChangeBacK(List<Coin> coinList);
+ List<Coin> giveChangeBacK(int change);
 
 
 
